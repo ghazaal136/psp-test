@@ -9,7 +9,10 @@ const colors = {
 
   //purple
   "main-purple": "#51397d",
-  'light-purple': '#7452b3',
+  "light-purple": "#7452b3",
+
+  //error
+  "main-error": "#D32F2F",
 };
 
 const config: Config = {

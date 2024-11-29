@@ -4,6 +4,6 @@ export const userData: IUser = {
   id: "",
   firstName: "",
   lastName: "",
-  role: "user",
+  role: "admin",
   avatar: "",
 };
