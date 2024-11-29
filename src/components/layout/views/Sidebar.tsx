@@ -44,7 +44,7 @@ const Sidebar: FC<ISidebar> = ({
 
         {showSidebar && (
           <div
-            className='flex items-center justify-center w-8 h-8 -scale-x-100 [&>svg>path]:!fill-white'
+            className='flex items-center justify-center w-8 h-8 -scale-x-100 [&>svg>path]:!fill-white cursor-pointer'
             onClick={handleToggleSidebar}
           >
             {icons.hamburgerMenu()}

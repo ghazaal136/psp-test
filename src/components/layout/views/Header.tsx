@@ -16,7 +16,7 @@ const Header: FC<IHeader> = ({ showSidebar, handleToggleSidebar }) => {
     >
         {!showSidebar && (
           <div
-            className='flex items-center justify-center w-8 h-8 -scale-x-100'
+            className='flex items-center justify-center w-8 h-8 -scale-x-100 cursor-pointer'
             onClick={handleToggleSidebar}
           >
             {icons.hamburgerMenu()}
