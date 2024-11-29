@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
 
 import ListPage from "@/containers/list/ListPage";
-import { useQuery } from "@tanstack/react-query";
+import Spinner from "@/components/spinner/Spinner";
 import { getPostsFetcher } from "@/apis/posts/get/get-post-fetcher";
 
 const List = () => {
@@ -13,7 +15,7 @@ const List = () => {
   if (isLoading)
     return (
       <div className='w-full h-full flex items-center justify-center'>
-        {/* Loading */}
+        <Spinner/>
       </div>
     );
 
