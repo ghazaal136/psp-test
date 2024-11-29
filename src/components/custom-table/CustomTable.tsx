@@ -17,7 +17,7 @@ const CustomTable: FC<ICustomTable> = ({ tableHead, tableBody }) => {
   return (
     <table className='min-w-[64rem] h-full relative'>
       <thead>
-        <tr className='bg-light-purple'>
+        <tr className='bg-light-purple sticky top-0 right-0 left-0 '>
           {tableHead.map((item: ITableHead, index: number) => (
             <td
               key={index}

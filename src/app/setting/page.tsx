@@ -6,8 +6,8 @@ import SettingPage from "@/containers/setting/SettingPage";
 import { userData } from "@/apis/mock";
 
 const Setting = () => {
-  const isAdmin = userData.role === "admin";
   const router = useRouter();
+  const isAdmin = userData.role === "admin";
 
   useEffect(() => {
     if (!isAdmin) {
