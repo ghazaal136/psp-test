@@ -1,7 +1,16 @@
-import Image from 'next/image'
+"use client";
+import { useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 
-export default function Home() {
-  return (
-   <p className='text-red-500 text-7xl'> سلام سلام</p>
-  )
-}
+const Home = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/dashboard");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
+  return <></>;
+};
+
+export default Home;

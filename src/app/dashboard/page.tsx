@@ -1,10 +1,10 @@
 import React from 'react'
 
+import DashboardPage from '@/containers/dashboard/DashboardPage'
+
 const Dashboard = () => {
   return (
-    <div>
-      slam
-    </div>
+   <DashboardPage/>
   )
 }
 
