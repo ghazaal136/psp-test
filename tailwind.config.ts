@@ -9,6 +9,7 @@ const colors = {
 
   //purple
   "main-purple": "#51397d",
+  'light-purple': '#7452b3',
 };
 
 const config: Config = {
