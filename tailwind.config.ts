@@ -10,6 +10,7 @@ const colors = {
   //purple
   "main-purple": "#51397d",
   "light-purple": "#7452b3",
+  'lightest-purple': '#e9d5ff',
 
   //error
   "main-error": "#D32F2F",
