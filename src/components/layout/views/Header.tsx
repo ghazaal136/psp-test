@@ -10,8 +10,8 @@ interface IHeader {
 const Header: FC<IHeader> = ({ showSidebar, handleToggleSidebar }) => {
   return (
     <div
-      className={`flex items-center h-12 py-2 mb-2 bg-red-400 ${
-        showSidebar ? '' : ''
+      className={`flex items-center h-12 py-2 mb-2 bg-transparent pl-10 transition-all mr-auto ${
+        showSidebar ? "w-[calc(100%-8.125rem)] lg:w-[calc(100%-20.625rem)]" : "w-[calc(100%-8.125rem)]"
       }`}
     >
         {!showSidebar && (

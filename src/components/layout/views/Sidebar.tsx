@@ -1,14 +1,23 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { icons } from "@/utils/icons";
+import { IMenuItem } from "../services";
+import CustomButton from "@/components/custom-button/CustomButton";
 
 interface ISidebar {
   handleToggleSidebar: () => void;
   showSidebar: boolean;
+  menuList: IMenuItem[];
 }
-const Sidebar: FC<ISidebar> = ({ handleToggleSidebar, showSidebar }) => {
+const Sidebar: FC<ISidebar> = ({
+  handleToggleSidebar,
+  showSidebar,
+  menuList,
+}) => {
+  const pathname = usePathname();
   return (
     <div
       className={`${
@@ -42,6 +51,28 @@ const Sidebar: FC<ISidebar> = ({ handleToggleSidebar, showSidebar }) => {
           </div>
         )}
       </div>
+
+      {showSidebar && (
+        <div className='mt-10'>
+          {menuList.map((menuItem: IMenuItem, index: number) => (
+            <div
+              key={index}
+              className='mb-2'
+            >
+              <CustomButton
+                text={menuItem.title}
+                isLink={true}
+                linkHref={menuItem.linkAddress}
+                classNames={
+                  menuItem.target === pathname.replace("/", "")
+                    ? "bg-light-purple"
+                    : ""
+                }
+              />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
